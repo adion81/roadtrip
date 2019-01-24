@@ -1,0 +1,21 @@
+@font-face{
+    font-family: "silkscreen";
+    src: url(../styles/fonts/slkscre-webfont.woff) format('truetype');
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'silkscreen';
+    color: lime;
+    background-color: black;
+}
+header{
+    padding: 3%;
+}
+h1{
+    font-size: 300%;
+    text-align: center;
+}
+p{
+    font-size: 150%;
+}

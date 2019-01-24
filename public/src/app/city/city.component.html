@@ -1,0 +1,23 @@
+<main>
+  <div id="city">
+    <h3>{{ city.name }}</h3>
+    <img src="{{ city.image }}" alt="{{ city.name }}">
+    <p>{{ city.description }}</p>
+    <p *ngIf="count != 11">{{ city.citySouth }} is {{ city.south }} miles.</p>
+    <p *ngIf="count === 11">You have won the game!  Press 9 to start over.</p>
+  </div>
+  <div id="info">
+  <div id="provisions">
+    <h3>Provisions</h3>
+    <p>Money: {{ money }}</p>
+    <p>Food: {{ currentProvisions.food }}</p>
+    <p>Fuel: {{ currentProvisions.fuel }}</p>
+  </div>
+  <div *ngIf="count != 11 "id="actions">
+    <h3>Actions</h3>
+    <p>1. Go to Store</p>
+    <p>2. Leave {{ city.name }}</p> 
+  </div>
+  </div>
+
+</main>

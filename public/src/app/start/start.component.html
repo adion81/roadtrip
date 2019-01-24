@@ -1,0 +1,37 @@
+<main>
+  <h3>Choose a ride</h3>
+    <div class="car">
+      <h6>1. Old Hooptie</h6>
+      <img src="../assets/img/hooptie.jpg" alt="Hooptie">
+      <p>Description: It has four wheels and has been around since your dads prom night, but it still runs...sometimes.</p>
+      <p>Fuel: 0 gallons</p>
+      <p>Seats: 4</p>
+      <p>Strength: 45 units</p>
+    </div>
+    <div class="car">
+      <h6>2. Your Mom's SUV</h6>
+      <img src="../assets/img/momSuv.jpg" alt="Mom's SUV">
+      <p>Description: This is your mom's precious SUV. If you ask her real nice, then she will let you have it...but it
+        must come back in one piece.</p>
+      <p>Fuel: 0 gallons</p>
+      <p>Seats: 7</p>
+      <p>Strength: 100 units</p>
+    </div>
+    <div class="car">
+      <h6>3. The Party Wagon</h6>
+      <img src="../assets/img/partyBus.jpg" alt="Party Wagon">
+      <p>This is the only way to ride in style...party style.</p>
+      <p>Fuel: 0 gallons</p>
+      <p>Seats: 10</p>
+      <p>Strength: 85 units</p>
+    </div>
+  <h4>Type the number of the ride you want to take.</h4>
+  <form *ngIf="crew">
+    <h4>Enter the names of your crew!!!</h4>
+    <div *ngFor="let key of crewKeys(crew)">
+      <input type="text" name="crew[key]" [(ngModel)]="crew[key]" placeholder="{{key}}">
+    </div>
+    <button type="button" (click)="newSubmit()">Press Button to continue</button>
+  </form>
+
+</main>

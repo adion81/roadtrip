@@ -1,0 +1,61 @@
+@font-face{
+    font-family: "silkscreen";
+    src: url(../styles/fonts/slkscre-webfont.woff) format('truetype');
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'silkscreen';
+    color: lime;
+    background-color: black;
+    /*outline: 1px solid red;*/
+    vertical-align: top;
+}
+main{
+    padding-bottom: 10%;
+}
+img{
+    width: 80%;
+    height: 225px;
+    display: block;
+    margin: 1% auto;
+}
+h3{
+    font-size: 200%;
+    text-align: center;
+}
+.car{
+    display: inline-block;
+    width: 25%;
+    padding: 2%;
+    margin-top: 1%;
+    margin-left: 3%;
+
+}
+.car p{
+    font-size: 175%;
+    margin: 1% 0 0 5%;
+    padding: 1%;
+}
+.car h6{
+    font-size: 200%;
+}
+h4{
+    text-align: center;
+    font-size: 200%;
+}
+form{
+    border: 2px dotted orange;
+    width: 60%;
+    margin: 1% auto;
+    padding: 2%;
+    font-size: 200%;
+    text-align: center;
+}
+input{
+    font-size: 150%;
+
+}
+button{
+    font-size: 150%;
+}

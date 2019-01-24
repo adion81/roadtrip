@@ -1,0 +1,28 @@
+<main>
+  <div>
+    <h3>Welcome to the Store!!!</h3>
+    <img src="../assets/img/store.jpg" alt="Store">
+  </div>
+  <div id="things">
+    <h3>Provisions to Buy</h3>
+    <p>Fuel $3 per gallon</p>
+    <p>Food $1 per snack</p>
+    <p>Press z Leave Store</p>
+    <p>Press SpaceBar to shop</p>
+  </div>
+  <div>
+    <h3>Current Provisions</h3>
+    <p>Road Bucks: {{ money }}</p>
+    <p>Fuel: {{ currentProvisions.fuel }}</p>
+    <p>Food: {{ currentProvisions.food }}</p>
+    <p *ngIf="error">{{ error }}</p>
+  </div>
+  <form *ngIf="provision">
+      <h4>Select the amount of provisions you want</h4>
+      <div *ngFor="let key of provisionKeys(provision)">
+        <p>{{key}}</p>
+        <input type="number" name="provision[key]" [(ngModel)]="provision[key]" placeholder="{{key}}" min="0" max="100">
+      </div>
+      <button type="button" (click)="provisionSubmit()">Purchase</button>
+    </form>
+</main>

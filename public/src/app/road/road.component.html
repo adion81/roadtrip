@@ -1,0 +1,38 @@
+<main>
+  <h2>The Open Road</h2>
+  <p>Anything can happen!!!</p>
+  <img src="../assets/img/road.jpg" alt="Open Road">
+  <div id="actions">
+    <h3>Actions</h3>
+    <p>Press SpaceBar to travel 30 mins</p>
+    <p *ngIf="message">{{ message }}</p>
+    <p *ngIf="food">{{ food }}</p>
+  </div>
+  <div id="info">
+    <h3>RoadTrip Info</h3>
+    <h5>Vehicle: {{ vehicle.type }}</h5>
+    <h4>The Crew</h4>
+    <div id="crew">
+      <h5 *ngIf="currentCrew.player1"> {{ currentCrew.player1 }}</h5>
+      <h5 *ngIf="currentCrew.player2"> {{ currentCrew.player2 }}</h5>
+      <h5 *ngIf="currentCrew.player3"> {{ currentCrew.player3 }}</h5>
+      <h5 *ngIf="currentCrew.player4"> {{ currentCrew.player4 }}</h5>
+      <h5 *ngIf="currentCrew.player5"> {{ currentCrew.player5 }}</h5>
+      <h5 *ngIf="currentCrew.player6"> {{ currentCrew.player6 }}</h5>
+      <h5 *ngIf="currentCrew.player7"> {{ currentCrew.player7 }}</h5>
+      <h5 *ngIf="currentCrew.player8"> {{ currentCrew.player8 }}</h5>
+      <h5 *ngIf="currentCrew.player9"> {{ currentCrew.player9 }}</h5>
+      <h5 *ngIf="currentCrew.player10"> {{ currentCrew.player10 }}</h5>
+    </div>
+    <h5>Money: {{ money }}</h5>
+    <h5>Fuel: {{ currentProvisions.fuel }} gallons</h5>
+    <h5>Food: {{ currentProvisions.food }} snacks</h5>
+    <h5>Miles to Next city: {{ milesToGo }}</h5>
+  </div>
+  <div id="hazard"*ngIf="roadHazard">
+    <p>{{roadHazard.message}}</p>
+    <p>Press 1 for yes</p>
+    <p>Press 2 for no</p>
+    <p>{{ consequence }}</p>
+  </div>
+</main>

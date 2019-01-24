@@ -1,0 +1,23 @@
+<main>
+  <h2>Hello Adrien, these are the cities that you have in your database.</h2>
+  <div id="show">
+    <div id="city" *ngFor="let city of cities">
+      <p><span>City Name:</span> {{ city.name }}</p>
+      <img src="{{city.image}}" alt="{{city.name}}">
+      <p><span>Distance to the North:</span> {{ city.north }}</p>
+      <p><span>Distance to the South:</span> {{ city.south }}</p>
+      <p><span>Distance to Bypass:</span> {{ city.bypass }}</p>
+      <div class="activity"  *ngFor="let activity of city['activities']">
+        <p><span>Activity:</span> {{activity.title}}</p>
+        <p><span>Message:</span> {{ activity.message }}</p>
+        <div class="danger"*ngFor="let danger of activity['dangers']">
+          <p><span>Danger:</span> {{ danger.danger }}</p>
+          <p><span>Message:</span> {{ danger.message }}</p>
+          <p><span>Damage:</span> {{ danger.damage }}</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</main>
+<router-outlet></router-outlet>
